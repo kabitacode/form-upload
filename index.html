@@ -1,0 +1,820 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <title>Register-Apply Member[Indonesian]</title>
+   <!-- Style CSS/ -->
+   <link rel="stylesheet" href="css/style.css" type="text/css">
+    <!-- Tooltipster Css -->
+    <link rel="stylesheet" href="css/tooltipster.bundle.min.css">
+    <link rel="stylesheet" href="css/tooltipster-sideTip-light.min.css">
+    <!-- Google Fonts -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Quattrocento Sans:light,lightitalic,normal,italic,bold,bolditalic">
+  
+</head>
+
+<body>
+   <form action="./phpexcel.php" method="post" enctype="multipart/form-data" id="myForm" class="myForm">
+      <div class="form-all">
+         <ul class="form-section page-section active" id="form1">
+            <li class="form-input-wide">
+               <div class="form-header-group">
+                  <h2 id="header_1" class="form-header">
+                     UPLOAD FOTO & DOKUMEN
+                  </h2>
+               </div>
+            </li>
+            <li class="form-line">
+               <label class="form-label form-label-left" for="foto">
+                     Foto Selfie Terbaru
+                     <span class="form-required">
+                        *
+                     </span>
+                  </label>
+               <div class="form-input">
+                  <label class="custom-file-upload" id="foto">UPLOAD A FILE</label>
+                  <input type="file" name="foto_selfie" id="foto_selfie" />
+                  <div class="form-sub-label">
+                     *File : JPG, max500KB, Tanpa topi & kacamata, mata kearah kamera, close up & baru
+                  </div>
+                  <ul class="file_upload_list" id="foto_list">
+                     <span id="foto_name" class="filename"></span>
+                  </ul>
+               </div>
+            </li>
+            <li class="form-line">
+               <label class="form-label form-label-left" for="ktp">
+                     KTP (Wajib)
+                     <span class="form-required">
+                        *
+                     </span>
+                  </label>
+               <div class="form-input">
+                  <label class="custom-file-upload" id="ktp">UPLOAD A FILE</label>
+                  <input type="file" name="ktp_wajib" id="ktp_wajib" />
+                  <div class="form-sub-label">
+                     *File : JPG, max500KB, Berwarna, Terbaca
+                  </div>
+                  <ul class="file_upload_list" id="ktp_list">
+                     <span id="ktp_name" class="filename"></span>
+                  </ul>
+               </div>
+            </li>
+            <li class="form-line">
+               <label class="form-label form-label-left" for="dokumen">
+                     Dokumen Berharga Lainnya
+                     <span class="form-required">
+                        *
+                     </span>
+                  </label>
+               <div class="form-input">
+                  <label class="custom-file-upload" id="dokumen">UPLOAD A FILE</label>
+                  <input type="file" name="dokumen_berharga" id="dokumen_berharga" />
+                  <div class="form-sub-label">
+                     *File : JPG, max500KB, Berwarna, Terbaca
+                  </div>
+                  <ul class="file_upload_list" id="dokumen_list">
+                     <span id="dokumen_name" class="filename"></span>
+                  </ul>
+               </div>
+            </li>
+
+            <li class="form-line">
+               <div class="form-button">
+                  <div class="form-button-back">
+                  </div>
+                  <div class="form-button-next">
+                     <button type="button" id="nextbtn1" class="next-button">
+                        Next
+                     </button>
+                  </div>
+               </div>
+            </li>
+         </ul>
+         <ul class="form-section page-section" id="form2">
+            <li class="form-input-wide">
+               <div class="form-header-group">
+                  <h3 id="header_2" class="form-header">
+                     DATA PRIBADI
+                  </h3>
+               </div>
+            </li>
+            <li class="form-line">
+               <label class="form-label form-label-left">
+                  Nama Lengkap
+                     <span class="form-required">
+                        *
+                     </span>
+               </label>
+               <div class="form-input">
+                  <input type="text" class="form-textbox" name="nama_lengkap" id="nama_lengkap">
+               </div>
+            </li>
+            <li class="form-line">
+               <label class="form-label form-label-left">
+                  Nama Panggilan
+                     <span class="form-required">
+                        *
+                     </span>
+               </label>
+               <div class="form-input">
+                  <input type="text" class="form-textbox" name="nama_panggilan" id="nama_panggilan">
+               </div>
+            </li>
+            <li class="form-line">
+               <label class="form-label form-label-left">
+                  Telepon
+                     <span class="form-required">
+                        *
+                     </span>
+               </label>
+               <div class="form-input">
+                  <input type="text" class="form-textbox tooltipster-custom" name="telepon_1" id="telepon_1" title="isi (-) jika tidak ada, Telkom TIDAK wajib">
+                  <div class="form-sub-label">
+                     HP-1 (Diutamakan ada fitur Whats App)
+                  </div>
+               </div>
+            </li>
+            <li class="form-line">
+               <label class="form-label form-label-left">&nbsp;</label>
+               <div class="form-input">
+                  <input type="text" class="form-textbox" name="telepon_2" id="telepon_2">
+                  <div class="form-sub-label">
+                     Telpon Rumah Telkom di Utamakan / HP-2
+                  </div>
+               </div>
+            </li>
+            <li class="form-line">
+               <label class="form-label form-label-left">
+                  Email
+                     <span class="form-required">
+                        *
+                     </span>
+               </label>
+               <div class="form-input">
+                  <input type="text" class="form-textbox" name="email" id="email">
+                  <div class="form-sub-label">
+                     Email yang sering digunakan
+                  </div>
+               </div>
+            </li>
+            <li class="form-line">
+               <div class="form-button">
+                  <div class="form-button-back">
+                     <button type="button" id="backbtn2" class="back-button">
+                        Back
+                     </button>
+                  </div>
+                  <div class="form-button-next">
+                     <button type="button" id="nextbtn2" class="next-button">
+                        Next
+                     </button>
+                  </div>
+               </div>
+            </li>
+         </ul>
+         <ul class="form-section page-section" id="form3">
+            <li class="form-input-wide">
+               <div class="form-header-group">
+                  <h3 id="header_3" class="form-header">
+                     MEDIA SOSIAL (MEDSOS)
+                  </h3>
+               </div>
+            </li>
+            <li class="form-line">
+               <label class="form-label form-label-left">
+                  Facebook
+                     <span class="form-required">
+                        *
+                     </span>
+               </label>
+               <div class="form-input">
+                  <input type="text" class="form-textbox" name="nama_facebook" id="nama_facebook">
+                  <div class="form-sub-label">
+                     Nama Facebook
+                  </div>
+               </div>
+            </li>
+            <li class="form-line">
+               <label class="form-label form-label-left">&nbsp;</label>
+               <div class="form-input">
+                  <input type="text" class="form-textbox" name="email_facebook" id="email_facebook">
+                  <div class="form-sub-label">
+                     Email Facebook
+                  </div>
+               </div>
+            </li>
+            <li class="form-line">
+               <label class="form-label form-label-left">
+                  Nama Instagram
+                     <span class="form-required">
+                        *
+                     </span>
+               </label>
+               <div class="form-input">
+                  <input type="text" class="form-textbox" name="nama_instagram" id="nama_instagram">
+               </div>
+            </li>
+            <li class="form-line">
+               <label class="form-label form-label-left">
+                  Nama Twitter
+                     <span class="form-required">
+                        *
+                     </span>
+               </label>
+               <div class="form-input">
+                  <input type="text" class="form-textbox" name="nama_twitter" id="nama_twitter">
+               </div>
+            </li>
+            <li class="form-line">
+               <div class="form-button">
+                  <div class="form-button-back">
+                     <button type="button" id="backbtn3" class="back-button">
+                           Back
+                        </button>
+                  </div>
+                  <div class="form-button-next">
+                     <button type="button" id="nextbtn3" class="next-button">
+                        Next
+                     </button>
+                  </div>
+               </div>
+            </li>
+         </ul>
+         <ul class="form-section page-section" id="form4">
+            <li class="form-input-wide">
+               <div class="form-header-group">
+                  <h3 id="header_4" class="form-header">
+                     RENCANA SEWA
+                  </h3>
+               </div>
+            </li>
+            <li class="form-line">
+               <label class="form-label form-label-left">
+                  Jenis Alat
+                     <span class="form-required">
+                        *
+                     </span>
+               </label>
+               <div class="form-input">
+                  <input type="text" class="form-textbox" name="jenis_alat" id="jenis_alat">
+               </div>
+            </li>
+            <li class="form-line">
+               <label class="form-label form-label-left">
+                  Tanggal
+                     <span class="form-required">
+                        *
+                     </span>
+               </label>
+               <div class="form-input">
+                  <input type="text" class="form-textbox" name="tanggal" id="tanggal">
+               </div>
+            </li>
+            <li class="form-line">
+               <label class="form-label form-label-left">
+                  Acara
+                     <span class="form-required">
+                        *
+                     </span>
+               </label>
+               <div class="form-input">
+                  <input type="text" class="form-textbox" name="acara" id="acara">
+               </div>
+            </li>
+            <li class="form-line">
+               <label class="form-label form-label-left">
+                  Cabang Zenon
+                     <span class="form-required">
+                        *
+                     </span>
+               </label>
+               <div class="form-input">
+                  <select class="form-dropdown" name="cabang_zenon" id="cabang_zenon">
+                        <option selected="" value="Pilih salah satu:"> Pilih salah satu: </option>
+                        <option value="Tebet, Jakarta"> Tebet, Jakarta </option>
+                        <option value="Dago, Bandung"> Dago, Bandung </option>
+                        <option value="Kraton, Jogja"> Kraton, Jogja </option>
+                        <option value="Denpasar, Bali"> Denpasar, Bali </option>
+                     </select>
+               </div>
+            </li>
+            <li class="form-line">
+               <div class="form-button">
+                  <div class="form-button-back">
+                     <button type="button" id="backbtn4" class="back-button">
+                        Back
+                     </button>
+                  </div>
+                  <div class="form-button-next">
+                     <button type="button" id="nextbtn4" class="next-button">
+                        Next
+                     </button>
+                  </div>
+               </div>
+            </li>
+         </ul>
+         <ul class="form-section page-section" id="form5">
+            <li class="form-input-wide">
+               <div class="form-header-group">
+                  <h3 id="header_5" class="form-header">
+                     DATA PENUNJANG
+                  </h3>
+               </div>
+            </li>
+            <li class="form-line">
+               <div class="form-html">
+                  <p>
+                     <span>
+                        <strong>
+                           #Umum
+                        </strong>
+                     </span>
+                  </p>
+               </div>
+            </li>
+            <li class="form-line">
+               <label class="form-label form-label-left">
+                  Mengetahui Zenon darimana?
+                     <span class="form-required">
+                        *
+                     </span>
+               </label>
+               <div class="form-input">
+                  <input type="text" class="form-textbox" name="mengetahui_zenon" id="mengetahui_zenon">
+                  <div class="form-sub-label">
+                     jika dari teman, tulis nama teman, jika teman anda member Zenon maka infokan ke-kami (agar cepat approve)
+                  </div>
+               </div>
+            </li>
+            <li class="form-line">
+               <label class="form-label form-label-left">
+                  Sebelumnnya Sewa dimana?
+                     <span class="form-required">
+                        *
+                     </span>
+               </label>
+               <div class="form-input">
+                  <input type="text" class="form-textbox" name="sewa" id="sewa">
+                  <div class="form-sub-label">
+                     Nama tempat sewa Sebelumnnya
+                  </div>
+               </div>
+            </li>
+            <li class="form-line">
+               <label class="form-label form-label-left">&nbsp;</label>
+               <div class="form-input">
+                  <input type="text" class="form-textbox" name="sewa_atas_nama" id="sewa_atas_nama">
+                  <div class="form-sub-label">
+                     Atas Nama Siapa..?
+                  </div>
+               </div>
+            </li>
+            <li class="form-line">
+               <div class="form-button">
+                  <div class="form-button-back">
+                     <button type="button" id="backbtn5" class="back-button">
+                        Back
+                     </button>
+                  </div>
+                  <div class="form-button-next">
+                     <button type="button" id="nextbtn5" class="next-button">
+                        Next
+                     </button>
+                  </div>
+               </div>
+            </li>
+         </ul>
+         <ul class="form-section page-section" id="form6">
+            <li class="form-line">
+               <div class="form-html">
+                  <p>
+                     <span>
+                        <strong>
+                           #Keluarga Yang Se-Rumah
+                        </strong>
+                     </span>
+                  </p>
+               </div>
+            </li>
+            <li class="form-line">
+               <label class="form-label form-label-left">
+                  Nama Keluarga
+                     <span class="form-required">
+                        *
+                     </span>
+               </label>
+               <div class="form-input">
+                  <input type="text" class="form-textbox" name="nama_keluarga" id="nama_keluarga">
+                  <div class="form-sub-label">
+                     Keluarga yang dapat dan atau bersedia menjamin nama baik anda dan siap diminta bantuan saat ada masalah dengan anda
+                  </div>
+               </div>
+            </li>
+            <li class="form-line">
+               <label class="form-label form-label-left">
+                  Hubungan dengan penyewa
+                     <span class="form-required">
+                        *
+                     </span>
+               </label>
+               <div class="form-input">
+                  <input type="text" class="form-textbox" name="hubungan_penyewa" id="hubungan_penyewa">
+               </div>
+            </li>
+            <li class="form-line">
+               <label class="form-label form-label-left">
+                  Telepon (HP)
+                     <span class="form-required">
+                        *
+                     </span>
+               </label>
+               <div class="form-input">
+                  <input type="text" class="form-textbox" name="hp" id="hp">
+               </div>
+            </li>
+            <li class="form-line">
+               <label class="form-label form-label-left">
+                  Alamat Keluarga
+                     <span class="form-required">
+                        *
+                     </span>
+               </label>
+               <div class="form-input">
+                  <input type="text" class="form-textbox" name="alamat_keluarga" id="alamat_keluarga">
+               </div>
+            </li>
+            <li class="form-line">
+               <div class="form-button">
+                  <div class="form-button-back">
+                     <button type="button" id="backbtn6" class="back-button">
+                        Back
+                     </button>
+                  </div>
+                  <div class="form-button-next">
+                     <button type="button" id="nextbtn6" class="next-button">
+                        Next
+                     </button>
+                  </div>
+               </div>
+            </li>
+         </ul>
+
+         <ul class="form-section page-section" id="form7">
+            <li class="form-line">
+               <div class="form-html">
+                  <p>
+                     <span>
+                        <strong>
+                           #Pekerjaan
+                        </strong>
+                     </span>
+                  </p>
+               </div>
+            </li>
+            <li class="form-line">
+               <label class="form-label form-label-left">
+                  Pekerjaan Sekarang
+                     <span class="form-required">
+                        *
+                     </span>
+               </label>
+               <div class="form-input">
+                  <input type="text" class="form-textbox" name="pekerjaan_sekarang" id="pekerjaan_sekarang">
+               </div>
+            </li>
+            <li class="form-line">
+               <label class="form-label form-label-left">
+                  Nama Tempat Kerja
+                     <span class="form-required">
+                        *
+                     </span>
+               </label>
+               <div class="form-input">
+                  <input type="text" class="form-textbox" name="nama_tmpt_kerja" id="nama_tmpt_kerja">
+               </div>
+            </li>
+            <li class="form-line">
+               <label class="form-label form-label-left">
+                  Jabatan Kerja
+                     <span class="form-required">
+                        *
+                     </span>
+               </label>
+               <div class="form-input">
+                  <input type="text" class="form-textbox" name="jabatan_kerja" id="jabatan_kerja">
+               </div>
+            </li>
+            <li class="form-line">
+               <label class="form-label form-label-left">
+                  Alamat Tempat Kerja
+                     <span class="form-required">
+                        *
+                     </span>
+               </label>
+               <div class="form-input">
+                  <input type="text" class="form-textbox" name="alamat_tmpt_kerja" id="alamat_tmpt_kerja">
+               </div>
+            </li>
+            <li class="form-line">
+               <label class="form-label form-label-left">
+                  Telepon Tempat Kerja
+                     <span class="form-required">
+                        *
+                     </span>
+               </label>
+               <div class="form-input">
+                  <input type="text" class="form-textbox" name="telepon_tmpt_kerja" id="telepon_tmpt_kerja">
+               </div>
+            </li>
+            <li class="form-line">
+               <div class="form-button">
+                  <div class="form-button-back">
+                     <button type="button" id="backbtn7" class="back-button">
+                        Back
+                     </button>
+                  </div>
+                  <div class="form-button-next">
+                     <button type="button" id="nextbtn7" class="next-button">
+                        Next
+                     </button>
+                  </div>
+               </div>
+            </li>
+         </ul>
+         <ul class="form-section page-section" id="form8">
+            <li class="form-line">
+               <div class="form-html">
+                  <p>
+                     <span>
+                        <strong>
+                           #Alamat tinggal sekaran
+                        </strong>
+                     </span>
+                  </p>
+                  <p>
+                     <span>
+                        <strong>
+                           (jika berbeda dengan KTP)
+                        </strong>
+                     </span>
+                  </p>
+               </div>
+            </li>
+            <li class="form-line">
+               <label class="form-label form-label-left">
+                  Alamat Tinggal Sekarang
+                     <span class="form-required">
+                        *
+                     </span>
+               </label>
+               <div class="form-input">
+                  <input type="text" class="form-textbox" name="alamat_tinggal_skrng" id="alamat_tinggal_skrng">
+               </div>
+            </li>
+            <li class="form-line">
+               <label class="form-label form-label-left">
+                  Status alamat tinggal sekarang
+                     <span class="form-required">
+                        *
+                     </span>
+               </label>
+               <div class="form-input">
+                  <select class="form-dropdown" id="status_tinggal" name="status_tinggal">
+                        <option selected="" value="Pilih salah satu:"> Pilih salah satu: </option>
+                        <option value="Kos"> Kos </option>
+                        <option value="Kontrak"> Kontrak </option>
+                        <option value="Milik Sendiri"> Milik Sendiri </option>
+                        <option value="Lainnya"> Lainnya </option>
+                     </select>
+               </div>
+            </li>
+            <li class="form-line">
+               <label class="form-label form-label-left">
+                  Nama Pemilik
+                     <span class="form-required">
+                        *
+                     </span>
+               </label>
+               <div class="form-input">
+                  <input type="text" class="form-textbox" name="nama_pemilik" id="nama_pemilik">
+               </div>
+            </li>
+            <li class="form-line">
+               <label class="form-label form-label-left">
+                  Telepon Pemilik
+                     <span class="form-required">
+                        *
+                     </span>
+               </label>
+               <div class="form-input">
+                  <input type="text" class="form-textbox" name="telepon_pemilik" id="telepon_pemilik">
+               </div>
+            </li>
+            <li class="form-line">
+               <div class="form-button">
+                  <div class="form-button-back">
+                     <button type="button" id="backbtn8" class="back-button">
+                        Back
+                     </button>
+                  </div>
+                  <div class="form-button-next">
+                     <button type="button" id="nextbtn8" class="next-button">
+                        Next
+                     </button>
+                  </div>
+               </div>
+            </li>
+         </ul>
+         <ul class="form-section page-section" id="form9">
+            <li class="form-line">
+               <div class="form-html">
+                  <p>
+                     <span>
+                        <strong>
+                           #Pendidikan
+                        </strong>
+                     </span>
+                  </p>
+               </div>
+            </li>
+            <li class="form-line">
+               <label class="form-label form-label-left">
+                  Pendidikan Sedang Berjalan / Terakhir
+                     <span class="form-required">
+                        *
+                     </span>
+               </label>
+               <div class="form-input">
+                  <select class="form-dropdown" id="pendidikan_sekarang" name="pendidikan_sekarang">
+                        <option selected="" value="Pilih salah satu:"> Pilih salah satu: </option>
+                        <option value="SMA/SMMK/Sederajat"> SMA/SMMK/Sederajat </option>
+                        <option value="Diploma"> Diploma </option>
+                        <option value="Sarjana"> Sarjana </option>
+                        <option value="Lainnya"> Lainnya </option>
+                     </select>
+               </div>
+            </li>
+            <li class="form-line">
+               <label class="form-label form-label-left">
+                  Nama Lembaga Pendidikan
+                     <span class="form-required">
+                        *
+                     </span>
+               </label>
+               <div class="form-input">
+                  <input type="text" class="form-textbox" name="nama_lembaga" id="nama_lembaga">
+               </div>
+            </li>
+            <li class="form-line">
+               <label class="form-label form-label-left">
+                  Alamat Lembaga Pendidikan
+                     <span class="form-required">
+                        *
+                     </span>
+               </label>
+               <div class="form-input">
+                  <input type="text" class="form-textbox" name="alamat_lembaga" id="alamat_lembaga">
+               </div>
+            </li>
+            <li class="form-line">
+               <label class="form-label form-label-left">
+                  Info Tamabahan (Angkatan Masuk)
+                     <span class="form-required">
+                        *
+                     </span>
+               </label>
+               <div class="form-input">
+                  <input type="text" class="form-textbox" name="info_tambahan" id="info_tambahan">
+               </div>
+            </li>
+            <li class="form-line">
+               <div class="form-button">
+                  <div class="form-button-back">
+                     <button type="button" id="backbtn9" class="back-button">
+                        Back
+                     </button>
+                  </div>
+                  <div class="form-button-next">
+                     <button type="button" id="nextbtn9" class="next-button">
+                        Next
+                     </button>
+                  </div>
+               </div>
+            </li>
+         </ul>
+         <ul class="form-section page-section" id="form10">
+            <li class="form-line">
+               <div class="form-html">
+                  <p>
+                     <span>
+                        <strong>
+                           #Pesan Khusus
+                        </strong>
+                     </span>
+                  </p>
+               </div>
+            </li>
+            <li class="form-line">
+               <label class="form-label form-label-left">
+                  Pesan
+               </label>
+               <div class="form-input">
+                  <textarea id="pesan" name="pesan" class="form-textarea" cols="30" rows="10"></textarea>
+               </div>
+            </li>
+            <li class="form-line">
+               <span class="red">
+                  <em>
+                  Saya Telah membaca dan tunduk pada
+                     <a href="http://www.zenonrental.com/tos" class="red">
+                        TOS (Terms of Service) / Ketentuan Layanan Zenon Rental
+                     </a>
+               </em>
+               </span>
+            </li>
+            <li class="form-line">
+               <label class="form-label form-label-left">
+                  Persetujuan TOS
+                     <span class="form-required">
+                        *
+                     </span>
+               </label>
+               <div class="form-input">
+                  <div class="form-checkbox-item">
+                        <label class="setuju">
+                        <input type="checkbox" class="form-checkbox" name="pertos" value="Setuju">
+                      <span></span>
+                      Setuju
+                      </label>
+                    </div>
+               </div>
+            </li>
+            <li class="form-line">
+               <div class="form-buttons-wrapper">
+                  <input class="form-submit-button" type="submit" value="Submit" name="submit" id="submit" />
+               </div>
+            </li>
+            <li class="form-line">
+               <div class="form-button">
+                  <div class="form-button-back">
+                     <button type="button" id="backbtn10" class="back-button">
+                        Back
+                     </button>
+                  </div>
+               </div>
+            </li>
+         </ul>
+      </div>
+   </form>
+     <!-- Jquery Offline -->
+     <script src="js/jquery.min.js"></script>
+     <!-- Jquery Validate -->
+     <script src="js/jquery.validate.min.js"></script>
+     <!-- Tooltipster JS -->
+     <script type="text/javascript" src="js/tooltipster.bundle.min.js"></script>
+    <!-- Main Js -->
+   <script src="js/main.js" charset="utf-8"></script>
+   <script>
+      $('#nextbtn1').on('click', function() {
+         $('#myForm').validate({
+            rules: {
+               foto_selfie: "required"
+            },
+            messages: {
+               foto_selfie: "Please Field the input"
+            }
+         });
+      })
+      $('#foto_selfie').change(function() {
+         var filename = $('#foto_selfie').val().replace(/C:\\fakepath\\/i, '');
+         $('#foto_list').addClass("success");
+         $('#foto_name').text(filename);
+      });
+
+      $('#ktp_wajib').change(function() {
+         var filename = $('#ktp_wajib').val().replace(/C:\\fakepath\\/i, '');
+         $('#ktp_list').addClass("success");
+         $('#ktp_name').text(filename);
+      });
+
+      $('#dokumen_berharga').change(function() {
+         var filename = $('#dokumen_berharga').val().replace(/C:\\fakepath\\/i, '');
+         $('#dokumen_list').addClass("success");
+         $('#dokumen_name').text(filename);
+      });
+
+      $('#foto').click(function() {
+         $('#foto_selfie').click();
+      });
+      $('#ktp').click(function() {
+         $('#ktp_wajib').click();
+      });
+      $('#dokumen').click(function() {
+         $('#dokumen_berharga').click();
+      });
+   </script>
+</body>
+
+</html>
