@@ -1,28 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-   <meta charset="UTF-8">
-   <title>Register-Apply Member[Indonesian]</title>
-   <!-- Style CSS/ -->
-   <link rel="stylesheet" href="css/style.css" type="text/css">
-    <!-- Tooltipster Css -->
-    <link rel="stylesheet" href="css/tooltipster.bundle.min.css">
-    <link rel="stylesheet" href="css/tooltipster-sideTip-light.min.css">
-    <!-- Google Fonts -->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Quattrocento Sans:light,lightitalic,normal,italic,bold,bolditalic">
-  
+<meta charset="UTF-8">
+<head>    
+      <title>Register-Apply Member[Indonesian]</title>
+      <!-- Style CSS/ -->
+      <link rel="stylesheet" href="css/style.css" type="text/css">
+       <!-- Tooltipster Css -->
+       <link rel="stylesheet" href="css/tooltipster.bundle.min.css">
+       <link rel="stylesheet" href="css/tooltipster-sideTip-light.min.css">
+       <!-- Google Fonts -->
+       <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Quattrocento Sans:light,lightitalic,normal,italic,bold,bolditalic">
+   
 </head>
 
 <body>
-   <form action="./phpexcel.php" method="post" enctype="multipart/form-data" id="myForm" class="myForm">
+   <form action="phpexcel.php" method="POST" enctype="multipart/form-data" target="_blank" class="myForm">
       <div class="form-all">
          <ul class="form-section page-section active" id="form1">
             <li class="form-input-wide">
                <div class="form-header-group">
-                  <h2 id="header_1" class="form-header">
+                  <h3 id="header_1" class="form-header">
                      UPLOAD FOTO & DOKUMEN
-                  </h2>
+                  </h3>
                </div>
             </li>
             <li class="form-line">
@@ -108,7 +107,7 @@
                      </span>
                </label>
                <div class="form-input">
-                  <input type="text" class="form-textbox" name="nama_lengkap" id="nama_lengkap">
+                  <input type="text" class="form-textbox" name="nama_lengkap" id="nama_lengkap" >
                </div>
             </li>
             <li class="form-line">
@@ -170,6 +169,9 @@
                      <button type="button" id="nextbtn2" class="next-button">
                         Next
                      </button>
+                  </div>
+                  <div id="err_notif1">
+                     
                   </div>
                </div>
             </li>
@@ -414,7 +416,7 @@
             </li>
             <li class="form-line">
                <label class="form-label form-label-left">
-                  Hubungan dengan penyewa
+                  Hubungan dengan pemyewa
                      <span class="form-required">
                         *
                      </span>
@@ -742,13 +744,8 @@
                      </span>
                </label>
                <div class="form-input">
-                  <div class="form-checkbox-item">
-                        <label class="setuju">
-                        <input type="checkbox" class="form-checkbox" name="pertos" value="Setuju">
-                      <span></span>
-                      Setuju
-                      </label>
-                    </div>
+                  <input type="radio" value="Setuju" name="setuju" id="setuju" />
+                  <label for="setuju">Setuju</label>
                </div>
             </li>
             <li class="form-line">
@@ -768,25 +765,21 @@
          </ul>
       </div>
    </form>
-     <!-- Jquery Offline -->
-     <script src="js/jquery.min.js"></script>
-     <!-- Jquery Validate -->
-     <script src="js/jquery.validate.min.js"></script>
-     <!-- Tooltipster JS -->
-     <script type="text/javascript" src="js/tooltipster.bundle.min.js"></script>
-    <!-- Main Js -->
-   <script src="js/main.js" charset="utf-8"></script>
+      <!-- Jquery Offline -->
+      
+      <!-- Jquery Validate -->
+
+      <!-- Tooltipster JS -->
+      <script type="text/javascript" src="js/tooltipster.bundle.min.js"></script>
+     <script
+       src="https://code.jquery.com/jquery-3.3.1.js"
+       integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+       crossorigin="anonymous"></script>
+       <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.17.0/dist/jquery.validate.min.js"></script>
+       <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.17.0/additional-methods.min.js"></script>
+     <!-- Main Js -->
+    <script src="js/main.js" charset="utf-8"></script>
    <script>
-      $('#nextbtn1').on('click', function() {
-         $('#myForm').validate({
-            rules: {
-               foto_selfie: "required"
-            },
-            messages: {
-               foto_selfie: "Please Field the input"
-            }
-         });
-      })
       $('#foto_selfie').change(function() {
          var filename = $('#foto_selfie').val().replace(/C:\\fakepath\\/i, '');
          $('#foto_list').addClass("success");
@@ -814,6 +807,8 @@
       $('#dokumen').click(function() {
          $('#dokumen_berharga').click();
       });
+
+      
    </script>
 </body>
 
