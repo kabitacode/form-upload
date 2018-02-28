@@ -16,41 +16,50 @@ $("#nextbtn1").on("click", function(){
  });
  
  
-//  function cek_kosong2(){
-//     var nama_lengkap=$('#form2 #nama_lengkap').val();
-//     var err='';
-//     if (nama_lengkap=='') {
-//        err+='<span style="color:red; text-align:center;">nama lengkap mohon diisi.</span><br>';
-//     }
-//     if ($('#form2 #nama_panggilan').val()=='') {
-//        err+='<span style="color:red;">nama panggilan mohon diisi.</span><br>';
-//     }
+ function cek_kosong2(){
+    var nama_lengkap=$('#form2 #nama_lengkap').val();
+    var err='';
+    if (nama_lengkap=='') {
+       err+='<span style="color:red;s">nama lengkap mohon diisi.</span><br>';
+    }
+    if ($('#form2 #nama_panggilan').val()=='') {
+       err+='<span style="color:red;">nama panggilan mohon diisi.</span><br>';
+
+    }
  
-//     if (err=='') {
-//        return true;
-//     }else{
-//        $('#err_notif1').html(err);
-//        return false;
-//     }
-//  }
+    if (err=='') {
+       return true;
+    }else{
+       $('#err_notif1').html(err);
+       return false;
+    }
+ }
  
  $("#nama_lengkap").on("click", function(){
     // if(cek_kosong2()){
-        if ($('#nama_lengkap').val() == '') { $('#nama_lengkap').css('border-color', 'red'); 
+        // if ($('#nama_lengkap').val() == '') { $('#nama_lengkap').css('border-color', 'red'); 
 
-    }else{ 
+    // }else{ 
     
-        $('#nama_lengkap').css('border-color', ''); }
+        // $('#nama_lengkap').css('border-color', ''); }
     // }else{
  
     // }
  });
  
  $("#backbtn3").on("click", function(){
+    
     $('#form2').addClass("active");
  
     $('#form3').removeClass("active"); 
+
+ });
+ $("#nextbtn2").on("click", function(){
+    if(cek_kosong2()){
+    $('#form3').addClass("active");
  
+    $('#form2').removeClass("active"); 
+    }
  });
  $("#nextbtn3").on("click", function(){
     $('#form4').addClass("active");
@@ -156,23 +165,33 @@ $(document).ready(function() {
  
  });
 
-// Validation
-$(document).ready(function () {
-$('#form2').validate({
+// // Validation
+// $(document).ready(function () {
+// $('#form2').validate({
 
-    rules:{
+//     rules:{
 
-        nama_lengkap:{
-            required: true
-        },
+//         nama_lengkap:{
+//             required: true
+//         },
 
-        email:{
-            required: true
-        },
+//         email:{
+//             required: true
+//         },
 
-        nama_panggilan:{
-            required: true
-        }
-    }
-});
-});
+//         nama_panggilan:{
+//             required: true
+//         }
+//     }
+// });
+// });
+
+// function validasi() {
+//     var nl = document.getElementById("nama_lengkap").value;
+//     var np = document.getElementById("nama_panggilan").value;
+//     if (nl != "" && np!="") {
+//         return true;
+//     }else{
+//         $('#nama_lengkap').css('border-color', 'red');
+//     }
+// }
