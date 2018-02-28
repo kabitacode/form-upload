@@ -1,4 +1,8 @@
 
+// $('input[type="text"]').click(function(){
+//     $('input[type="text"]').removeClass('red-error');
+//     $(this).addClass('red-error');
+// });
 
 // Slide
 $("#nextbtn1").on("click", function(){
@@ -36,15 +40,14 @@ $("#nextbtn1").on("click", function(){
  }
  
  $("#nama_lengkap").on("click", function(){
-    // if(cek_kosong2()){
-        // if ($('#nama_lengkap').val() == '') { $('#nama_lengkap').css('border-color', 'red'); 
+  
+        if ($('#nama_lengkap').val() == '') { $('#nama_lengkap').css('border-color', 'red'); 
 
-    // }else{ 
+    }else{ 
     
-        // $('#nama_lengkap').css('border-color', ''); }
-    // }else{
+        $('#nama_lengkap').css('border-color', ''); }
  
-    // }
+
  });
  
  $("#backbtn3").on("click", function(){
@@ -195,3 +198,6 @@ $(document).ready(function() {
 //         $('#nama_lengkap').css('border-color', 'red');
 //     }
 // }
+
+
+

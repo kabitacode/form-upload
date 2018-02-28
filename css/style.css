@@ -168,7 +168,6 @@ input[type="file"] {
    box-sizing: border-box;
    clear: both;
 }
-
 .form-label {
    width: 40% !important;
    white-space: normal;
@@ -342,13 +341,13 @@ p {
 .red {
    color: #ff0000;
 }
-
+.red-error{border: 1px solid #ff0000;}
 .form-required {
    margin-left: 5px;
    color: red;
 
 }
-
+.required{background: blueviolet; color: cornflowerblue;}
 .form-buttons-wrapper {
    margin-left: 0 !important;
    text-align: center !important;

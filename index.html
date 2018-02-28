@@ -106,7 +106,7 @@
                      </span>
                </label>
                <div class="form-input">
-                  <input type="text" class="form-textbox" name="nama_lengkap" id="nama_lengkap" data-rule-required="true"  />
+                  <input type="text" class="form-textbox" name="nama_lengkap" id="nama_lengkap">
                </div>
             </li>
             <li class="form-line">
@@ -765,12 +765,6 @@
          </ul>
       </div>
    </form>
-   <script src="https://ajax.aspnetcdn.com/ajax/jquery.validate/1.13.1/jquery.validate.min.js"></script>
-<script src="https://ajax.aspnetcdn.com/ajax/jquery.validate/1.13.1/additional-methods.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-scrollTo/2.1.0/jquery.scrollTo.min.js"></script>
-<script src="js/vendor.js" ></script>
-
-<script src="jqueryform.com.min.js?ver=v2.1.0&id=jqueryform-c69d3d" ></script>
    <script src="js/jquery.min.js"></script>
   
    <!-- <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.17.0/dist/jquery.validate.min.js"></script>
@@ -782,10 +776,6 @@
      <!-- Main Js -->
     <script src="js/main.js" charset="utf-8"></script>
    <script type="text/javascript">
-	// start jqueryform initialization
-	// --------------------------------
-	JF.init('#form2');
-
 
       $('#foto_selfie').change(function() {
          var filename = $('#foto_selfie').val().replace(/C:\\fakepath\\/i, '');
