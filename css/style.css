@@ -168,6 +168,22 @@ input[type="file"] {
    box-sizing: border-box;
    clear: both;
 }
+.validation{
+  width: 130px;
+  height: 26px;
+  font-size: 12.10px;
+  border: 1px solid #FF3200;
+  float: left;
+  margin: -20px 0 0 -110px;
+  padding: 5px 0 0 10px;
+  color: #FFFFFF;
+  background: #FF0000;  
+  display: none;
+  position: relative;
+  top: -27px;
+  left: 247px;
+}
+
 .form-label {
    width: 40% !important;
    white-space: normal;

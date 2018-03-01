@@ -1,4 +1,48 @@
+$(document).ready(function (){
+    
+    var inputs = [];
+    inputs[0] = $('#nama_lengkap');
+    inputs[1] = $('#nama_panggilan');
+    inputs[2] = $('#email');
 
+    var errors = [];
+    errors[0] = 'This field is required'; 
+    errors[1] = 'This field is required'; 
+    errors[2] = 'Enter a valid e-mail address'; 
+
+    var expressions = [];
+    expressions[0] = '';
+    expressions[1] = /regex/ ;
+
+       // Template function with event handlers
+       var showFormValidation = function showFormValidation(input, error, expression) {
+        input.on('focusout', function() {
+            if(input.val() == expression) {
+                $(this).next('.validation').show();
+                $(this).next('.validation').html(error);
+                $(this).css({'box-shadow': '0 0 3px #FF3200',
+                             '-moz-boxshadow': '0 0 3px #FF3200',
+                            '-webkit-boxshadow': '0 0 3px #FF3200',
+                             '-o-boxshadow': '0 0 3px #FF3200',
+                             'border': '1px solid #FF3200'
+                            });
+            } else if(input.val() != expression) {
+                $(this).next('.validation').hide();
+                $(this).css({'box-shadow': 'none',
+                             '-moz-boxshadow': 'none',
+                            '-webkit-boxshadow': 'none',
+                             '-o-boxshadow': 'none',
+                             'border': '1px solid grey'
+                            });
+            }
+        });
+    };
+
+    for(i=0; i < errors.length; i++) { 
+        showFormValidation( inputs[i], errors[i], expressions[0]);
+    }
+
+  });
 // $('input[type="text"]').click(function(){
 //     $('input[type="text"]').removeClass('red-error');
 //     $(this).addClass('red-error');
@@ -39,7 +83,7 @@ $("#nextbtn1").on("click", function(){
     }
  }
  
- $("#nama_lengkap").on("click", function(){
+ $("#nama_lengkap").on("click", function errb(){
   
         if ($('#nama_lengkap').val() == '') { $('#nama_lengkap').css('border-color', 'red'); 
 

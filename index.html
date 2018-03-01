@@ -13,7 +13,7 @@
       </head>
 
 <body>
-   <form action="phpexcel.php" method="POST" enctype="multipart/form-data" target="_blank" class="myForm">
+   <form action="phpexcel.php" method="POST" enctype="multipart/form-data" target="_blank" class="myForm"  name="vform">
       <div class="form-all">
          <ul class="form-section page-section active" id="form1">
             <li class="form-input-wide">
@@ -107,7 +107,9 @@
                </label>
                <div class="form-input">
                   <input type="text" class="form-textbox" name="nama_lengkap" id="nama_lengkap">
+                  <div class="validation"></div>
                </div>
+      
             </li>
             <li class="form-line">
                <label class="form-label form-label-left">
@@ -117,9 +119,10 @@
                      </span>
                </label>
                <div class="form-input">
-                  <input type="text" class="form-textbox" name="nama_panggilan" id="nama_panggilan" data-validation="length alphanumeric" 
-                  data-validation-length="3-12" >
+                  <input type="text" class="form-textbox" name="nama_panggilan" id="nama_panggilan">
+                  <div class="validation"></div>
                </div>
+               
             </li>
             <li class="form-line">
                <label class="form-label form-label-left">
@@ -130,10 +133,12 @@
                </label>
                <div class="form-input">
                   <input type="text" class="form-textbox tooltipster-custom" name="telepon_1" id="telepon_1" title="isi (-) jika tidak ada, Telkom TIDAK wajib">
+                  
                   <div class="form-sub-label">
                      HP-1 (Diutamakan ada fitur Whats App)
                   </div>
                </div>
+             
             </li>
             <li class="form-line">
                <label class="form-label form-label-left">&nbsp;</label>
@@ -152,11 +157,13 @@
                      </span>
                </label>
                <div class="form-input">
-                  <input type="email" class="form-textbox" name="email" id="email" required data-parsley-type="email" data-parsley-trigger="keyup">
+                  <input type="email" class="form-textbox" name="email" id="email">
+                  <div class="validation"></div>
                   <div class="form-sub-label">
                      Email yang sering digunakan
                   </div>
                </div>
+              
             </li>
             <li class="form-line">
                <div class="form-button">
