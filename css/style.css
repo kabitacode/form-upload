@@ -204,7 +204,7 @@ input[type="file"] {
    color: #555555;
 
 }
-
+/* .form-line:focus-within{background: blue;} */
 .form-textarea {
    height: 100px;
    -webkit-border-radius: 0px;
@@ -411,6 +411,7 @@ p {
    border-radius: 3px 3px;
    -moz-box-shadow: 0 1px #fff inset, 0 1px #ddd;
    -webkit-box-shadow: 0 1px #fff inset, 0 1px #ddd;
+   box-shadow: 0 1px #fff inset, 0 1px #ddd;
    color: #666;
    text-shadow: 0 1px #fff;
    cursor: pointer;
@@ -469,8 +470,4 @@ p {
 
 .file_upload_list.success {
    display: block;
-}
-
-.form-input-wide {
-
 }

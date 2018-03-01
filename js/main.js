@@ -1,4 +1,5 @@
-$(document).ready(function (){
+$(document).ready(
+    function errbor(){
     
     var inputs = [];
     inputs[0] = $('#nama_lengkap');
@@ -43,6 +44,8 @@ $(document).ready(function (){
     }
 
   });
+
+ 
 // $('input[type="text"]').click(function(){
 //     $('input[type="text"]').removeClass('red-error');
 //     $(this).addClass('red-error');
@@ -83,16 +86,16 @@ $("#nextbtn1").on("click", function(){
     }
  }
  
- $("#nama_lengkap").on("click", function errb(){
+//  $("#nama_lengkap").on("click", function errb(){
   
-        if ($('#nama_lengkap').val() == '') { $('#nama_lengkap').css('border-color', 'red'); 
+//         if ($('#nama_lengkap').val() == '') { $('#nama_lengkap').css('border-color', 'red'); 
 
-    }else{ 
+//     }else{ 
     
-        $('#nama_lengkap').css('border-color', ''); }
+//         $('#nama_lengkap').css('border-color', ''); }
  
 
- });
+//  });
  
  $("#backbtn3").on("click", function(){
     
@@ -102,7 +105,7 @@ $("#nextbtn1").on("click", function(){
 
  });
  $("#nextbtn2").on("click", function(){
-    if(cek_kosong2()){
+    if(errbor()){
     $('#form3').addClass("active");
  
     $('#form2').removeClass("active"); 
