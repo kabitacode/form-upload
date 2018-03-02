@@ -168,7 +168,24 @@ input[type="file"] {
    box-sizing: border-box;
    clear: both;
 }
-.validation{
+/**
+ * Errors
+ */
+ .error {
+  border: 1px solid #FF3200;
+  box-shadow: 0 0 3px #FF3200;
+              -moz-box-shadow : 0 0 3px #FF3200;
+              -webkit-box-shadow : 0 0 3px #FF3200;
+              -o-box-shadow : 0 0 3px #FF3200;
+}
+
+.error-message {
+	color: red;
+	font-style: italic;
+	margin-bottom: 1em;
+}
+
+/* .validation{
   width: 130px;
   height: 26px;
   font-size: 12.10px;
@@ -182,7 +199,7 @@ input[type="file"] {
   position: relative;
   top: -27px;
   left: 247px;
-}
+} */
 
 .form-label {
    width: 40% !important;
@@ -197,7 +214,6 @@ input[type="file"] {
 
 .form-label-left {
    width: 210px;
-   display: inline-block;
    white-space: normal;
    float: left;
    text-align: left;
