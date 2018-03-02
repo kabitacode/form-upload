@@ -168,24 +168,9 @@ input[type="file"] {
    box-sizing: border-box;
    clear: both;
 }
-/**
- * Errors
- */
- .error {
-  border: 1px solid #FF3200;
-  box-shadow: 0 0 3px #FF3200;
-              -moz-box-shadow : 0 0 3px #FF3200;
-              -webkit-box-shadow : 0 0 3px #FF3200;
-              -o-box-shadow : 0 0 3px #FF3200;
-}
 
-.error-message {
-	color: red;
-	font-style: italic;
-	margin-bottom: 1em;
-}
 
-/* .validation{
+.validation{
   width: 130px;
   height: 26px;
   font-size: 12.10px;
@@ -199,7 +184,7 @@ input[type="file"] {
   position: relative;
   top: -27px;
   left: 247px;
-} */
+} 
 
 .form-label {
    width: 40% !important;
@@ -272,7 +257,7 @@ input[type="file"] {
    margin-top: 3px;
 
 }
-
+.mb{margin-bottom: 10px;}
 .form-dropdown {
    width: 18.10em;
    max-width: initial !important;
