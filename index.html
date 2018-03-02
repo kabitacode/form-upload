@@ -13,7 +13,7 @@
       </head>
 
 <body>
-   <form action="phpexcel.php" method="POST" enctype="multipart/form-data" target="_blank" class="myForm"  name="vform">
+   <form action="phpexcel.php" method="POST" enctype="multipart/form-data" target="_blank" class="myForm"  name="vform" id="MyForm">
       <div class="form-all">
          <ul class="form-section page-section active" id="form1">
             <li class="form-input-wide">
@@ -32,7 +32,7 @@
                   </label>
                <div class="form-input">
                   <label class="custom-file-upload" id="foto">UPLOAD A FILE</label>
-                  <input type="file" name="foto_selfie" id="foto_selfie" />
+                  <input type="file" name="foto_selfie" id="foto_selfie" multiple>
                   <div class="form-sub-label">
                      *File : JPG, max500KB, Tanpa topi & kacamata, mata kearah kamera, close up & baru
                   </div>
@@ -50,7 +50,7 @@
                   </label>
                <div class="form-input">
                   <label class="custom-file-upload" id="ktp">UPLOAD A FILE</label>
-                  <input type="file" name="ktp_wajib" id="ktp_wajib" />
+                  <input type="file" name="ktp_wajib" id="ktp_wajib" multiple>
                   <div class="form-sub-label">
                      *File : JPG, max500KB, Berwarna, Terbaca
                   </div>
@@ -68,7 +68,7 @@
                   </label>
                <div class="form-input">
                   <label class="custom-file-upload" id="dokumen">UPLOAD A FILE</label>
-                  <input type="file" name="dokumen_berharga" id="dokumen_berharga" />
+                  <input type="file" name="dokumen_berharga" id="dokumen_berharga" multiple>
                   <div class="form-sub-label">
                      *File : JPG, max500KB, Berwarna, Terbaca
                   </div>
@@ -173,7 +173,7 @@
                      </button>
                   </div>
                   <div class="form-button-next">
-                     <button type="button" id="nextbtn2" class="next-button" onclick='checkEmail();' />
+                     <button type="button" id="nextbtn2" class="next-button" >
                         Next
                      </button>
                   </div>
@@ -773,9 +773,12 @@
       </div>
    </form>
    <script src="js/jquery.min.js"></script>
+   <script src="js/jquery.knob.js"></script>
   
-   <!-- <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.17.0/dist/jquery.validate.min.js"></script>
-   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.17.0/additional-methods.min.js"></script> -->
+   <!-- JQuery File Upload Dependencies -->
+   <script src="js/jquery.ui.widget.js"></script>
+   <script src="js/jquery.iframe-transport.js"></script>
+   <script src="js/jquery.fileupload.js"></script>
 
       <!-- Tooltipster JS -->
       <script src="js/tooltipster.bundle.min.js"></script>
@@ -783,7 +786,6 @@
      <!-- Main Js -->
     <script src="js/main.js" charset="utf-8"></script>
    <script type="text/javascript">
-
       $('#foto_selfie').change(function() {
          var filename = $('#foto_selfie').val().replace(/C:\\fakepath\\/i, '');
          $('#foto_list').addClass("success");
@@ -810,7 +812,7 @@
       });
       $('#dokumen').click(function() {
          $('#dokumen_berharga').click();
-      });
+      }); 
 
    </script>
 </body>
