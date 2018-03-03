@@ -73,7 +73,6 @@ $("#nextbtn1").on("click", function(){
  
  });
  
-  
  
  function cek_kosong2(){
      
@@ -83,31 +82,39 @@ $("#nextbtn1").on("click", function(){
     var telepon_2=$('#telepon_2').val();
     var email=$('#email').val();
     var err='';
+    var reg = /^([A-Za-z0-9_\-\.])+\@([A-Za-z0-9_\-\.])+\.([A-Za-z]{2,4})$/;
+    
     if (nama_lengkap=='') {
         $('#nama_lengkap').css('border-color', 'red');
         err+='<span style="color: red">Nama Lengkap Harus diisi.</span></br>';
-
     }
     if (nama_panggilan=='') {
         $('#nama_panggilan').css('border-color', 'red');
-        err+='<span style="color: red">Nama Panggilan Harus diisi.</span></br>';
+        err+='<span style="color: #FF3200">Nama Panggilan Harus diisi.</span></br>';
     }
     if (telepon_1=='') {
         $('#telepon_1').css('border-color', 'red');
-        err+='<span style="color: red";>Nama Panggilan Harus diisi.</span></br>';
+        err+='<span style="color: #FF3200";>No Telepon/HP Harus diisi.</span></br>';
     }
     if (telepon_2=='') {
         $('#telepon_2').css('border-color', 'red');
-        err+='<span style="color: red">No Telepon/HP Harus diisi.</span></br>';
+        err+='<span style="color: #FF3200">No Telepon/HP Harus diisi.</span></br>';
     }
-    if (email=='') {
+    // if (email=='') {
+    //     $('#email').css('border-color', 'red');
+    //     err+='<span style="color: #FF3200">Email Harus diisi.</span></br>';
+    // }
+    if (reg.test(email) == false) {
         $('#email').css('border-color', 'red');
-        err+='<span style="color: red">Email Harus diisi.</span></br>';
+        err+='<span style="color: #FF3200">Email Harus diisi dan masukan email yang Benar.</span></br>';
     }
 
     if (nama_lengkap !='' & nama_panggilan !='' & telepon_1 !='' & telepon_2 !='' & email !='') {
         err.hide;
     }
+
+  
+
     if (err=='') {
        return true;
     }else{
@@ -128,9 +135,9 @@ $("#nextbtn1").on("click", function(){
 //  });
  
  $("#backbtn3").on("click", function(){
-    
     $('#form2').addClass("active");
- 
+    $('#err_notif1').css('display', 'none');
+
     $('#form3').removeClass("active"); 
 
  });

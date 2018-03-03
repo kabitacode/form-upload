@@ -173,6 +173,7 @@ input[type="file"] {
 .validation{
   width: 80px;
   height: 26px;
+  font-weight: 600;
   font-size: 12.10px;
   border: 1px solid #FF3200;
   float: left;
@@ -185,7 +186,6 @@ input[type="file"] {
   top: -27px;
   left: 303px;
 } 
-
 .form-label {
    width: 40% !important;
    white-space: normal;
