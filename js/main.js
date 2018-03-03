@@ -1,19 +1,25 @@
-$(document).ready(
-    function errbor(){
+$(document).ready(function (){
     
     var inputs = [];
     inputs[0] = $('#nama_lengkap');
     inputs[1] = $('#nama_panggilan');
-    inputs[2] = $('#email');
+    inputs[2] = $('#telepon_1');
+    inputs[3] = $('#telepon_2');
+    inputs[4] = $('#email');
 
     var errors = [];
-    errors[0] = 'This field is required'; 
-    errors[1] = 'This field is required'; 
-    errors[2] = 'This field is required'; 
+    errors[0] = 'Harus diisi.'; 
+    errors[1] = 'Harus diisi.'; 
+    errors[2] = 'Harus diisi.';
+    errors[3] = 'Harus diisi.';
+    errors[4] = 'Harus diisi.';
 
     var expressions = [];
     expressions[0] = '';
-    expressions[1] = /regex/ ;
+    expressions[1] = '';
+    expressions[2] = '';
+    expressions[3] = '';
+    expressions[4] = /regex/ ;
 
        // Template function with event handlers
        var showFormValidation = function showFormValidation(input, error, expression) {
@@ -67,48 +73,47 @@ $("#nextbtn1").on("click", function(){
  
  });
  
+  
  
  function cek_kosong2(){
+     
     var nama_lengkap=$('#nama_lengkap').val();
     var nama_panggilan=$('#nama_panggilan').val();
     var telepon_1=$('#telepon_1').val();
     var telepon_2=$('#telepon_2').val();
     var email=$('#email').val();
     var err='';
-    if (nama_lengkap=='', nama_panggilan=='', telepon_1=='', telepon_2=='', email=='' ) {
+    if (nama_lengkap=='') {
         $('#nama_lengkap').css('border-color', 'red');
-        $('#nama_panggilan').css('border-color', 'red');
-        $('#telepon_1').css('border-color', 'red');
-        $('#telepon_2').css('border-color', 'red');
-        $('#email').css('border-color', 'red');
-        err+='<span style="color: red">Form Harus diisi.</span></br>';
+        err+='<span style="color: red">Nama Lengkap Harus diisi.</span></br>';
+
     }
-//     if (nama_lengkap=='') {
-//         $('#nama_lengkap').css('border-color', 'red');
-//         err+='<span style="color: red";>Nama Lengkap Harus diisi.</span></br>';
-//     }
-//     if (nama_Panggilan=='') {
-//         $('#nama_panggilan').css('border-color', 'red');
-//         err+='<span style="color: red";>Nama Panggilan Harus diisi.</span></br>';
-//     }
-//     if (telepon_1=='') {
-//         $('#nama_panggilan').css('border-color', 'red');
-//         err+='<span style="color: red";>Nama Panggilan Harus diisi.</span></br>';
-//     }
-//     if (telepon_2=='') {
-//         $('#nama_panggilan').css('border-color', 'red');
-//         err+='<span style="color: red";>No Telepon/HP Harus diisi.</span></br>';
-//     }
-//     if (email=='') {
-//         $('#email').css('border-color', 'red');
-//         err+='<span style="color: red";>Email Harus diisi.</span></br>';
-//     }
-//     if (err=='') {
-//        return true;
-//     }else{
-//        $('#err_notif1').html(err);
-//        return false;
-//     }
+    if (nama_panggilan=='') {
+        $('#nama_panggilan').css('border-color', 'red');
+        err+='<span style="color: red">Nama Panggilan Harus diisi.</span></br>';
+    }
+    if (telepon_1=='') {
+        $('#telepon_1').css('border-color', 'red');
+        err+='<span style="color: red";>Nama Panggilan Harus diisi.</span></br>';
+    }
+    if (telepon_2=='') {
+        $('#telepon_2').css('border-color', 'red');
+        err+='<span style="color: red">No Telepon/HP Harus diisi.</span></br>';
+    }
+    if (email=='') {
+        $('#email').css('border-color', 'red');
+        err+='<span style="color: red">Email Harus diisi.</span></br>';
+    }
+
+    if (nama_lengkap !='' & nama_panggilan !='' & telepon_1 !='' & telepon_2 !='' & email !='') {
+        err.hide;
+    }
+    if (err=='') {
+       return true;
+    }else{
+       $('#err_notif1').html(err);
+       
+    }
 }
  
 //  $("#nama_lengkap").on("click", function errb(){
@@ -132,7 +137,7 @@ $("#nextbtn1").on("click", function(){
  $("#nextbtn2").on("click", function(){
     if(cek_kosong2()){
     $('#form3').addClass("active");
- 
+
     $('#form2').removeClass("active"); 
     }
  });
@@ -240,36 +245,7 @@ $(document).ready(function() {
  
  });
 
-// // Validation
-// $(document).ready(function () {
-// $('#form2').validate({
 
-//     rules:{
-
-//         nama_lengkap:{
-//             required: true
-//         },
-
-//         email:{
-//             required: true
-//         },
-
-//         nama_panggilan:{
-//             required: true
-//         }
-//     }
-// });
-// });
-
-// function validasi() {
-//     var nl = document.getElementById("nama_lengkap").value;
-//     var np = document.getElementById("nama_panggilan").value;
-//     if (nl != "" && np!="") {
-//         return true;
-//     }else{
-//         $('#nama_lengkap').css('border-color', 'red');
-//     }
-// }
 
 // Fungsi Untuk Upload File
 $(function(){
