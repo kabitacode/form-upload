@@ -100,7 +100,7 @@ input[type="file"] {
 }
 .form-all:before {
    content: "";
-   background-image: url(https://www.jotform.com/uploads/zenonrental/form_files/zenon%20logo%20black%20200px.685.png);
+   background: url('../images/zenonlogo.png');
    display: inline-block;
    height: 37px;
    /*position: absolute;*/
