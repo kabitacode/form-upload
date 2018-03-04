@@ -30,9 +30,10 @@
                         *
                      </span>
                   </label>
-               <div class="form-input">
+               <div class="form-input" id="foto_selfie_container">
                   <label class="custom-file-upload" id="foto">UPLOAD A FILE</label>
                   <input type="file" name="foto_selfie" id="foto_selfie" multiple>
+                  <div class="validation"></div>
                   <div class="form-sub-label">
                      *File : JPG, max500KB, Tanpa topi & kacamata, mata kearah kamera, close up & baru
                   </div>
@@ -48,9 +49,10 @@
                         *
                      </span>
                   </label>
-               <div class="form-input">
+               <div class="form-input" id="ktp_container">
                   <label class="custom-file-upload" id="ktp">UPLOAD A FILE</label>
                   <input type="file" name="ktp_wajib" id="ktp_wajib" multiple>
+                  <div class="validation"></div>
                   <div class="form-sub-label">
                      *File : JPG, max500KB, Berwarna, Terbaca
                   </div>
@@ -66,9 +68,10 @@
                         *
                      </span>
                   </label>
-               <div class="form-input">
+               <div class="form-input" id="dok_container">
                   <label class="custom-file-upload" id="dokumen">UPLOAD A FILE</label>
                   <input type="file" name="dokumen_berharga" id="dokumen_berharga" multiple>
+                  <div class="validation"></div>
                   <div class="form-sub-label">
                      *File : JPG, max500KB, Berwarna, Terbaca
                   </div>
@@ -88,6 +91,7 @@
                      </button>
                   </div>
                </div>
+               <div id="err_notif1"></div>
             </li>
          </ul>
          <ul class="form-section page-section" id="form2">
@@ -170,9 +174,7 @@
                         Next
                      </button>
                   </div>
-                  <div id="err_notif1">
-                     
-                  </div>
+                  <div id="err_notif2"></div>
                </div>
             </li>
          </ul>
@@ -239,6 +241,7 @@
                      </button>
                   </div>
                </div>
+               <div id="err_notif3"></div>
             </li>
          </ul>
          <ul class="form-section page-section" id="form4">
@@ -316,6 +319,7 @@
                      </button>
                   </div>
                </div>
+               <div id="err_notif4"></div>
             </li>
          </ul>
          <ul class="form-section page-section" id="form5">
@@ -383,6 +387,7 @@
                      </button>
                   </div>
                </div>
+               <div id="err_notif5"></div>
             </li>
          </ul>
          <ul class="form-section page-section" id="form6">
@@ -461,6 +466,7 @@
                      </button>
                   </div>
                </div>
+               <div id="err_notif6"></div>
             </li>
          </ul>
 
@@ -549,6 +555,7 @@
                      </button>
                   </div>
                </div>
+               <div id="err_notif7"></div>
             </li>
          </ul>
          <ul class="form-section page-section" id="form8">
@@ -637,6 +644,7 @@
                      </button>
                   </div>
                </div>
+               <div id="err_notif8"></div>
             </li>
          </ul>
          <ul class="form-section page-section" id="form9">
@@ -718,6 +726,7 @@
                      </button>
                   </div>
                </div>
+               <div id="err_notif9"></div>
             </li>
          </ul>
          <ul class="form-section page-section" id="form10">
@@ -759,8 +768,13 @@
                      </span>
                </label>
                <div class="form-input">
-                  <input type="radio" value="Setuju" name="setuju" id="setuju" />
-                  <label for="setuju">Setuju</label>
+                  <div class="form-checkbox-item">
+                        <label class="setuju">
+                        <input type="checkbox" class="form-checkbox" name="pertos" value="Setuju">
+                      <span></span>
+                      Setuju
+                      </label>
+                    </div>
                </div>
             </li>
             <li class="form-line">
@@ -776,6 +790,7 @@
                      </button>
                   </div>
                </div>
+               <div id="err_notif10"></div>
             </li>
          </ul>
       </div>
