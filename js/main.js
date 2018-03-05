@@ -608,6 +608,7 @@ $("#nextbtn1").on("click", function(){
     $('#form9').removeClass("active"); 
       }
  });
+
  $("#submit").on("click", function(){
     if(cek_kosong10()){
  
@@ -634,3 +635,5 @@ $(document).ready(function() {
     });
  
  });
+
+ 
