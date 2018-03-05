@@ -20,7 +20,7 @@
       </head>
 
 <body>
-   <form action="phpexcel.php" method="POST" enctype="multipart/form-data" target="_blank" class="myForm"  name="vform" id="MyForm">
+   <form action="php/phpexcel.php" method="POST" enctype="multipart/form-data" target="_blank" class="myForm"  name="vform" id="MyForm">
       <div class="form-all">
          <ul class="form-section page-section active" id="form1">
             <li class="form-input-wide">
@@ -38,7 +38,7 @@
                      </span>
                   </label>
                <div class="form-input" id="foto_selfie_container">
-                  <label class="custom-file-upload ajax-upload-dragdrop rubberBand animated" id="foto">UPLOAD A FILE</label>
+                  <label class="custom-file-upload rubberBand animated" id="foto">UPLOAD A FILE</label>
                   <input type="file" name="foto_selfie" id="foto_selfie" multiple>
                   <div class="validation"></div>
                   <div class="form-sub-label">
@@ -75,11 +75,11 @@
                         *
                      </span>
                   </label>
-               <div class="form-input" id="dok_container">
-                  <label class="custom-file-upload rubberBand animated" id="dokumen">UPLOAD A FILE</label>
+               <div class="form-input ajax-file-upload-statusbar" id="dok_container">
+                  <label class="custom-file-upload ajax-file-upload-preview rubberBand animated" id="dokumen">UPLOAD A FILE</label>
                   <input type="file" name="dokumen_berharga" id="dokumen_berharga" multiple>
                   <div class="validation"></div>
-                  <div class="form-sub-label">
+                  <div class="form-sub-label ajax-file-upload-filename">
                      *File : JPG, max500KB, Berwarna, Terbaca
                   </div>
                   <ul class="file_upload_list" id="dokumen_list">

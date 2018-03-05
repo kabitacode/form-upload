@@ -635,15 +635,16 @@ $(document).ready(function() {
  
  });
 
- $(document).ready(function()
- {
-     $(".custom-file-upload").uploadFile({
-        url:"upload.php",
-        multiple:true,
-        dragDrop:true,
-        fileName:"myfile"
-     });
- });
+ 
+//  $(document).ready(function()
+//  {
+//      $(".custom-file-upload").uploadFile({
+//         url:"php/upload.php",
+//         multiple:true,
+// //         dragDrop:true,
+// //         fileName:"myfile"
+// //      });
+//  });
 
 // Fungsi Untuk Upload File
 // $(function(){
