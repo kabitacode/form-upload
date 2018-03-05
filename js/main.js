@@ -635,22 +635,15 @@ $(document).ready(function() {
  
  });
 
-
- $(".custom-file-upload").upload({
-    action: "phpexcel.php",
-    beforeSend: onBeforeSend
-  });
-  function onBeforeSend(formData, file) {
-    // Cancel request
-    if (file.name.indexOf(".jpg") < 0) {
-      return false;
-    }
-  
-    // Modify and return form data
-    formdata.append("input_name", "input_value");
-  
-    return formData;
-  }
+ $(document).ready(function()
+ {
+     $(".custom-file-upload").uploadFile({
+        url:"upload.php",
+        multiple:true,
+        dragDrop:true,
+        fileName:"myfile"
+     });
+ });
 
 // Fungsi Untuk Upload File
 // $(function(){

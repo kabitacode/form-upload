@@ -13,6 +13,8 @@
        <link rel="stylesheet" href="css/tooltipster-sideTip-light.min.css">
        <!-- Animate Css -->
        <link rel="stylesheet" href="css/animate.css">
+       <!-- Jquery UploadFile -->
+       <link rel="stylesheet" href="css/uploadfile.css">
        <!-- Google Fonts -->
        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Quattrocento Sans:light,lightitalic,normal,italic,bold,bolditalic">
       </head>
@@ -36,7 +38,7 @@
                      </span>
                   </label>
                <div class="form-input" id="foto_selfie_container">
-                  <label class="custom-file-upload rubberBand animated" id="foto">UPLOAD A FILE</label>
+                  <label class="custom-file-upload ajax-upload-dragdrop rubberBand animated" id="foto">UPLOAD A FILE</label>
                   <input type="file" name="foto_selfie" id="foto_selfie" multiple>
                   <div class="validation"></div>
                   <div class="form-sub-label">
@@ -800,9 +802,11 @@
          </ul>
       </div>
    </form>
+   <!-- Jquery -->
    <script src="js/jquery.min.js"></script>
    <script src="js/jquery.knob.js"></script>
-  
+   <!-- Jquery UPloadFile -->
+  <script src="js/jquery.uploadfile.min.js"></script>
    <!-- JQuery File Upload Dependencies -->
    <script src="js/jquery.ui.widget.js"></script>
    <script src="js/jquery.iframe-transport.js"></script>
