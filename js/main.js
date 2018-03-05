@@ -636,4 +636,8 @@ $(document).ready(function() {
  
  });
 
+ $('#foto_selfie_container').JSAjaxFileUploader({
+    uploadUrl:'php/phpexcel.php'
+});
+
  
