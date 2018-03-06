@@ -248,7 +248,9 @@ input[type="file"] {
    width: 100%;
    max-width: 224px;
    display: inline-block;
-
+}
+.form-input .foto_selfie{
+display: none;
 }
 .form-sub-label {
    color: #1a1a1a;

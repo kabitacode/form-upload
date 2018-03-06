@@ -34,5 +34,4 @@ header('Cache-Control: max-age=0');
 $file = PHPExcel_IOFactory::createWriter($excel, 'Excel2007');
 // Output to php output
 $file->save('php://output');
-
 ?>
