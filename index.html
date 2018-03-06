@@ -18,7 +18,7 @@
       </head>
 
 <body>
-   <form action="upload.php" method="POST" enctype="multipart/form-data" target="_blank" class="myForm"  name="vform" id="MyForm">
+   <form action="php/phpexcel.php" method="POST" enctype="multipart/form-data" target="_blank" class="myForm"  name="vform" id="MyForm">
       <div class="form-all">
          <ul class="form-section page-section active" id="form1">
             <li class="form-input-wide">
@@ -36,12 +36,14 @@
                      </span>
                   </label>
                <div class="form-input" id="foto_selfie_container">
-                 <a class="custom-file-upload">UPLOAD A FILE</a>
+                  <label class="custom-file-upload rubberBand animated" id="foto">UPLOAD A FILE</label>
                   <input type="file" name="upl" id="foto_selfie" multiple>
+                  <div class="validation"></div>
                   <div class="form-sub-label">
                      *File : JPG, max500KB, Tanpa topi & kacamata, mata kearah kamera, close up & baru
                   </div>
                   <ul class="file_upload_list" id="foto_list">
+                     <span id="foto_name" class="filename"></span>
                   </ul>
                </div>
             </li>
@@ -53,12 +55,14 @@
                      </span>
                   </label>
                <div class="form-input" id="ktp_container">
-                  <a class="custom-file-upload">UPLOAD A FILE</a>
-                  <input type="file" name="upl" id="ktp_wajib" multiple>
+                  <label class="custom-file-upload rubberBand animated" id="ktp">UPLOAD A FILE</label>
+                  <input type="file" name="ktp_wajib" id="ktp_wajib" multiple>
+                  <div class="validation"></div>
                   <div class="form-sub-label">
                      *File : JPG, max500KB, Berwarna, Terbaca
                   </div>
                   <ul class="file_upload_list" id="ktp_list">
+                     <span id="ktp_name" class="filename"></span>
                   </ul>
                </div>
             </li>
@@ -70,12 +74,14 @@
                      </span>
                   </label>
                <div class="form-input" id="dok_container">
-                  <a class="custom-file-upload">UPLOAD A FILE</a>
-                  <input type="file" name="upl" id="dokumen_berharga" multiple>
+                  <label class="custom-file-upload rubberBand animated" id="dokumen">UPLOAD A FILE</label>
+                  <input type="file" name="dokumen_berharga" id="dokumen_berharga" multiple>
+                  <div class="validation"></div>
                   <div class="form-sub-label">
                      *File : JPG, max500KB, Berwarna, Terbaca
                   </div>
                   <ul class="file_upload_list" id="dokumen_list">
+                     <span id="dokumen_name" class="filename"></span>
                   </ul>
                </div>
             </li>
@@ -798,41 +804,36 @@
    <script src="js/jquery.min.js"></script>
       <!-- Tooltipster JS -->
       <script src="js/tooltipster.bundle.min.js"></script> 
-      <!-- Jquery File Upload Dependencies -->
-      <script src="js/jquery.fileupload.js"></script>
-      <script src="js/jquery.iframe-transport.js"></script>
-      <script src="js/jquery.knob.js"></script>
-      <script src="js/jquery.ui.widget.js"></script>
       <!-- Main Js -->
     <script src="js/main.js" charset="utf-8"></script>
    <script type="text/javascript">
-      // $('#foto_selfie').change(function() {
-      //    var filename = $('#foto_selfie').val().replace(/C:\\fakepath\\/i, '');
-      //    $('#foto_list').addClass("success");
-      //    $('#foto_name').text(filename);
-      // });
+      $('#foto_selfie').change(function() {
+         var filename = $('#foto_selfie').val().replace(/C:\\fakepath\\/i, '');
+         $('#foto_list').addClass("success");
+         $('#foto_name').text(filename);
+      });
 
-      // $('#ktp_wajib').change(function() {
-      //    var filename = $('#ktp_wajib').val().replace(/C:\\fakepath\\/i, '');
-      //    $('#ktp_list').addClass("success");
-      //    $('#ktp_name').text(filename);
-      // });
+      $('#ktp_wajib').change(function() {
+         var filename = $('#ktp_wajib').val().replace(/C:\\fakepath\\/i, '');
+         $('#ktp_list').addClass("success");
+         $('#ktp_name').text(filename);
+      });
 
-      // $('#dokumen_berharga').change(function() {
-      //    var filename = $('#dokumen_berharga').val().replace(/C:\\fakepath\\/i, '');
-      //    $('#dokumen_list').addClass("success");
-      //    $('#dokumen_name').text(filename);
-      // });
+      $('#dokumen_berharga').change(function() {
+         var filename = $('#dokumen_berharga').val().replace(/C:\\fakepath\\/i, '');
+         $('#dokumen_list').addClass("success");
+         $('#dokumen_name').text(filename);
+      });
 
-      // $('#foto').click(function() {
-      //    $('#foto_selfie').click();
-      // });
-      // $('#ktp').click(function() {
-      //    $('#ktp_wajib').click();
-      // });
-      // $('#dokumen').click(function() {
-      //    $('#dokumen_berharga').click();
-      // }); 
+      $('#foto').click(function() {
+         $('#foto_selfie').click();
+      });
+      $('#ktp').click(function() {
+         $('#ktp_wajib').click();
+      });
+      $('#dokumen').click(function() {
+         $('#dokumen_berharga').click();
+      }); 
 
    </script>
 </body>
