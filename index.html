@@ -13,6 +13,7 @@
        <link rel="stylesheet" href="css/tooltipster-sideTip-light.min.css">
        <!-- Animate Css -->
        <link rel="stylesheet" href="css/animate.css">
+       <link rel="stylesheet" href="css/jquery.fileupload.css">
        <!-- Google Fonts -->
        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Quattrocento Sans:light,lightitalic,normal,italic,bold,bolditalic">
       </head>
@@ -28,7 +29,20 @@
                   </h3>
                </div>
             </li>
-            <li class="form-line">
+            <div class="upload-wrapper">
+                        <div id="error_output"></div>
+                            <!-- file drop zone -->
+                            <div id="dropzone">
+                                <i>Drop files here</i>
+                                <!-- upload button -->
+                                <span class="button btn-blue input-file">
+                                    Browse Files <input id="fileupload" type="file" name="files[]" multiple>
+                                </span>
+                            </div>
+                            <!-- The container for the uploaded files -->
+                            <div id="files" class="files"></div>
+                        </div>
+            <!-- <li class="form-line">
                <label class="form-label form-label-left swing animated" for="foto">
                      Foto Selfie Terbaru
                      <span class="form-required">
@@ -84,7 +98,7 @@
                      <span id="dokumen_name" class="filename"></span>
                   </ul>
                </div>
-            </li>
+            </li> -->
 
             <li class="form-line">
                <div class="form-button">
@@ -804,6 +818,7 @@
    <script src="js/jquery.min.js"></script>
       <!-- Tooltipster JS -->
       <script src="js/tooltipster.bundle.min.js"></script> 
+      <script src="js/jquery.fileupload.js"></script>
       <!-- Main Js -->
     <script src="js/main.js" charset="utf-8"></script>
    <script type="text/javascript">
