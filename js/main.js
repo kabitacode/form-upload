@@ -636,21 +636,4 @@ $(document).ready(function() {
  
  });
 
- var restrictedUploader = new qq.FineUploader({
-    element: document.getElementById("fine-uploader-validation"),
-    template: 'qq-template-validation',
-    request: {
-        endpoint: '/server/uploads'
-    },
-    thumbnails: {
-        placeholders: {
-            waitingPath: '/source/placeholders/waiting-generic.png',
-            notAvailablePath: '/source/placeholders/not_available-generic.png'
-        }
-    },
-    validation: {
-        allowedExtensions: ['jpeg', 'jpg', 'txt'],
-        itemLimit: 3,
-        sizeLimit: 51200 // 50 kB = 50 * 1024 bytes
-    }
-});
+ 
